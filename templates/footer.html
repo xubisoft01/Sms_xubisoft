@@ -1,0 +1,107 @@
+{% load static %}
+    <section class="bg mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    {% for headQuater in headQuater %}
+                    <div class="top-f">
+                        <h4>BALTIMORE</h4>
+                        <h3>Headquarters</h3>
+                        <p>{{headQuater.title}}</p>
+                        <a href="#">{{headQuater.phone_no}}</a><br>
+                        <a href="#">www.xubisoft.com</a><br>
+                        <a href="#">{{headQuater.email_address}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-3">
+                    <div class="top-f">
+                        <h4>LOCATIONS</h4>
+                        <h3>We are everywhere</h3>
+                        <img src="{% static 'img/world-dot.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="top-f">
+                        <h4>OUR NETWORK</h4>
+                        {% for conntact in conntact %}
+                        <a href="#"> Corporate Office : {{conntact.address}}</a>
+                        {% endfor %}
+                        <br>
+                        {% for headQuater in headQuater %}
+                        <a href="#">Branch : {{headQuater.branch_address}}</a><br>
+                        <a href="#">Phone : {{headQuater.branch_ph_no}}</a><br>
+                        <a href="#">E-mail : {{headQuater.branch_email}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="top-f">
+                        <h4>GET IN TOUCH</h4>
+                        <h3>Follow our activity</h3>
+                        <p>Interactively coordinate proactive e-commerce via process-centric “outside the box“ thinking.</p>
+                        <div class="position-relative d-inline-flex align-items-center top-shape pe-0">
+                        <div class="me-0 pe-0 py-2">
+                            <p class="icon-design ft">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a> 
+                                <a href="#"><i class="fab fa-instagram"></i> </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   <!-- Footer design Start -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 text-white">
+                    <h3 class="footer-title">About us</h3>
+                    <div class="about-s d-flex">
+                        <div class="about-sec1">
+                        <p>About us</p><hr>
+                        <p>Location</p><hr>
+                        <p>News</p><hr>
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <h3 class="footer-title">Securities</h3>
+                    <div class="about-s d-flex">
+                        <div class="about-sec1">
+                        <p>Privacy Policy</p><hr>
+                        <p>Terms & Condition</p><hr>
+                        <p>Contact</p><hr>
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="footer-title">Our Services</h3>
+                   
+                    <div class="pro-sec1"> 
+                        {% for homeservice in homeService %}
+                        <a href="#" class="btn">{{homeservice.service_title}}</a>
+                        {% endfor %}
+                    </div> 
+                   
+                   
+            </div>
+            <div class="row border-top">
+                <div class="col-lg-6">
+                    <p class="m-3">© 2023 , All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <p class="m-3">Design & Developed By: <a href="http://xubisoft.com" target="_blank">Xubisoft Ltd.</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer design End -->

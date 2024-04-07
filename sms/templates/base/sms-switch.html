@@ -1,0 +1,104 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    
+    <section class="sms-switch">
+        <div class="container">
+        {% for smswitch in switch %}
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="contact-slider-area">
+                    <h2>{{smswitch.title}}</h2>
+                    <p>{{smswitch.details}}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="sms-img">
+                    <img src="{{smswitch.picture.url}}" alt="">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+    </section>
+   
+    <section class="design-full-service mt-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for smswitch in switch %}
+                    <div class="text-pr-service text-center">
+                        <h1>{{smswitch.service_title}}</h1>
+                        <p>{{smswitch.service_details}} <br> Business Today.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-company-service">
+        <div class="container">
+                <div class="row">
+                    {% for manue in manue %}
+                    <div class="col-md-4">
+                        <div class="company-service-sec text-center">
+                            <i class="fas {{manue.icone}}"></i>
+                            <h2 class="company-service-sec1-underline">{{manue.title}}</h2>
+                            <p>{{manue.details}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            <hr>
+        </div>
+    </section>
+
+    <section class="bg-company-industrial">
+        <div class="container">
+            {% for choose in choose %}
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="company-industrial-sec">
+                            <img src="{{choose.picture.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="company-industrial-sec">
+                            <h2>{{choose.title}}</h2>
+                            <p>{{choose.point_1}} </p>
+                            <p>{{choose.point_2}}</p>
+                            <p>{{choose.point_3}}</p>
+                            <p>{{choose.point_4}}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="bg-company-industrial">
+        <div class="container">
+            <hr>
+                <div class="row mt-5">
+                    {% for conte in content %}
+                    <div class="col-md-6">
+                        <div class="company-industrial-sec">
+                           <p><strong>{{conte.title}}:</strong> {{conte.details}}</p>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+    </section>
+
+
+{% endblock %}
+
+   

@@ -1,0 +1,123 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for boDy in boDy %}
+
+     <section class="bg a2p">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="hero-area pb-5">
+                        <h1 class="about-">{{boDy.title}}</h1>
+                        <p>{{boDy.details}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="voiceotp-video py-5">
+                        <video width="100%" height="100%" controls>
+                        <source src="{% static 'img/VOICE_OTP_Work.mp4' %}" type="video/mp4">
+                        <source src="{% static 'imgVOICE_OTP_Work.mp4' %}" type="video/ogg">
+                        Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="passwor-tt">
+                        <h1>{{boDy.title2}}</h1>
+                        <p>{{boDy.details2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+             <div class="row mt-5 mb-5">
+                {% for voiceManue in voiceManue %}
+                    <div class="col-md-3">
+                        <div class="company-service-sec text-center">
+                            <i class="fas {{voiceManue.icone}}"></i>
+                            <h2 class="company-service-sec1-underline">{{voiceManue.title}}</h2>
+                            <p>{{voiceManue.details}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+
+                <div class="passwor-tt-sm">
+                    <p>{{boDy.details3}}</p>
+                </div>
+        </div>
+    </section>
+
+    <section class="bg-company-industrial">
+        <div class="container">
+            <hr>
+                <div class="row mt-5">
+                    {% for contentOtp in contentOtp %}
+                    <div class="col-md-6">
+                        <div class="company-industrial-sec">
+                           <p><strong>{{contentOtp.title}}:</strong> {{contentOtp.details}}</p>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+        </div>
+    </section>
+
+
+    <section class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="faq-head">
+                        <h1 class="faq-area">Frequently Asked Question</h1>
+                    </div>
+                    <div class="faq__content mb-30">
+                     <div class="accordion" id="accordionExample">
+                        {% for objectqu in question %}
+                           <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{objectqu.id}}">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{objectqu.id}}" aria-expanded="false" aria-controls="collapse{{objectqu.id}}">
+                                        <span>0{{objectqu.id}}. </span> {{objectqu.question}}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{objectqu.id}}" class="accordion-collapse collapse" aria-labelledby="heading{{objectqu.id}}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>{{objectqu.answer}}</p>
+                                    </div>
+                                </div>
+                           </div>
+                        {% endfor %}
+                     </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endfor %}
+
+
+{% endblock %}
+
+   

@@ -1,0 +1,159 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    
+        <!-- Navbar End -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% for homebody in homebody %}
+                    <div class="slider-area">
+                        <h2>{{homebody.top_title1}} <br>{{homebody.top_title2}}</h2>
+                    <div class="sl">
+                        <a href="#" class="slider-bt">Our Protfolio<i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        </section>  
+        <section class="bg">
+            <div class="container">
+                {% for homebody in homebody %}
+                <div class="row">
+                    <div class="col-md-4">
+                      <div class="hero-img">
+                          <img src="{{homebody.picture.url}}" alt="">
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="hero-area">
+                            <h4>LEARN MORE</h4>
+                            <h1 class="hero-underline">{{homebody.help_title}}</h1>
+                            <p>{{homebody.details}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    <!--------------- Services area started -------------------->
+
+    <section class="service-section">
+        <div class="container pb-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="service-heading py-lg-5">
+                    <h1 class="service-underline">Our Services</h1>
+                    <p>We provide not only the SMS and Voice service, We do rent SMS <br> Switch, VoiceOTP Platform, WiFi Solution</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for homeservice in homeService %}
+            <div class="col-md-4">
+                <div class="service-icon">
+                    <i class="fas {{homeservice.service_icone}}"></i>
+                    <div class="service-sec text-center">
+                        <h4>{{homeservice.service_title}}</h4>
+                        <p>{{homeservice.service_details}}</p>
+                    </div>
+                </div>
+            </div> 
+            {% endfor %}
+        </div>
+        
+    </div>
+    </section>
+    
+    <div class="container">
+        {% for homeTerminat in homeTerminat %}
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <div class="employment-history text-center mt-5">
+                    <h1>{{homeTerminat.Terminated_title}}</h1>
+                </div>
+            </div>
+            </div>
+            <div class="row py-5">
+                <div class="col-md-3">
+                    <div class="complete-line">
+                        <div class="complete text-center">
+                        <h1>{{homeTerminat.Satisfied_Clients}}</h1>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="complete text-center">
+                        <h1>{{homeTerminat.Increased_Traffic}}</h1>
+                        <p>Increased Traffic</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="complete text-center">
+                        <h1>{{homeTerminat.Increased_Revenue}}</h1>
+                        <p>Increased Revenue</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="complete text-center">
+                        <h1>{{homeTerminat.ANNUAL_TURNOVER}}</h1>
+                        <p>ANNUAL TURNOVER (MILIONS)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <section class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="faq-head">
+                        <h1 class="faq-area">Frequently Asked Question</h1>
+                    </div>
+                    <div class="faq__content mb-30">
+                        <div class="accordion" id="accordionExample">
+                            {% for question in homeQuestion %}
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{question.id}}">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{question.id}}" aria-expanded="false" aria-controls="collapse{{question.id}}">
+                                            <span>0{{question.id}}. </span> {{question.question}}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse{{question.id}}" class="accordion-collapse collapse" aria-labelledby="heading{{question.id}}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p>{{question.answer}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-are"> 
+        <div class="container">
+            {% for homebody in homebody %}
+            <div class="row">
+                <div class="service-heading py-lg-5">
+                    <h1 class="news-underline">{{homebody.bottom_title}}</h1>
+                    <p>{{homebody.bottom_details}}</p>
+                </div>
+                <div class="lets text-center">
+                    <a href="{% url 'contact' %}">GET IN TOUCH</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+ 
+
+{% endblock %}

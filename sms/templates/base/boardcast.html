@@ -1,0 +1,125 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+    
+    <section class="sms-switch">
+        <div class="container"> 
+        {% for boradtop in boardcastop %}
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="contact-slider-area">
+                    <h2>{{boradtop.title}}</h2>
+                    <p>{{boradtop.details}}</p>
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                <div class="sms-img">
+                    <img src="{{boradtop.picture.url}}" alt="">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </section>
+
+        <section class="py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        {% for boradtop in boardcastop %}
+                        <div class="bordcast-tt">
+                            <h1>{{boradtop.site_title}}</h1>
+                            <p>{{boradtop.site_details}}</p>
+                            <div class="boardcast-bt mt-5">
+                                <a href="#">VIEW ALL COURSE</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="col-md-4">
+                        {% for broadcast1 in boardcast %}
+                        <div class="boardcast-service-sec">
+                                <i class="fas fa-sun"></i>
+                                <h2>{{broadcast1.title}}</h2>
+                                <p>{{broadcast1.details}}</p>
+                        </div>
+                        {% endfor %}
+
+                        
+                    </div>
+                    <div class="col-md-4">
+                        <div class="boardcast-service-sec">
+                               <i class="fas fa-sun"></i>
+                               <h2>EASE OF USE</h2>
+                               <p>These services are generally easy to use and do not require any special technical knowledge. All you need is a phone or computer with internet access to record and send your message.</p>
+                           </div>
+                        <div class="boardcast-service-sec">
+                               <i class="fas fa-sun"></i>
+                               <h2>Personalization</h2>
+                               <p>Many services allow you to personalize your messages with the recipient’s name or other information, which can make the message feel more targeted and relevant.</p>
+                           </div>
+                        <div class="boardcast-service-sec">
+                               <i class="fas fa-sun"></i>
+                               <h2>Reach</h2>
+                               <p>You can reach a large number of people quickly and efficiently.</p>
+                           </div>
+                        <div class="boardcast-service-sec">
+                               <i class="fas fa-sun"></i>
+                               <h2>Response rate</h2>
+                               <p>Voice broadcasts and voice message campaigns can have a high response rate, as recipients can easily opt-in to receive future messages or take other desired actions by pressing a key on their phone.</p>
+                           </div>
+                   </div>
+                
+                    
+                </div>
+            </div>
+        </section>
+    <div class="container">
+        <section class="boardcast-switch">
+            {% for boradmeddle in boardmeddle %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="boardcast-btc-area">
+                        <h2>{{boradmeddle.title}}</h2>
+                        <p>{{boradmeddle.details}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sms-img">
+                        <img src="{{boradmeddle.picture.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+        <div class="row">
+            {% for boradbottom in boardbottom %}
+            <div class="col-md-6">
+                <div class="card-body d-flex">
+                    <img src="{{boradbottom.picture.url}}" alt="">
+                    <div class="cad-txt">
+                         <h4>{{boradbottom.title}}</h4>
+                    <p>{{boradbottom.details}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            {% for boradmeddle in boardmeddle %}
+            <div class="boardcast-ft text-center pb-5">
+                <a href="#">{{boradmeddle.demo}}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+ 
+
+{% endblock %}
+
+   

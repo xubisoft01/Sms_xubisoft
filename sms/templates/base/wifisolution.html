@@ -1,0 +1,113 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+{% for wifyBody in wifyBody %}
+    <section class="sln-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="sln-hero">
+                        <p>{{wifyBody.top_details}}</p>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="sln-img-area">
+                        <img src="{{wifyBody.picture.url}}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="sln-hero-pp">
+                        <p>{{wifyBody.details2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section class="sln-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="solution-tt">
+                        <h1>Advantages of using a captive portal. Control user management & billing.</h1>
+                    </div>
+                </div>
+            </div>
+             <div class="row mt-5 mb-5">
+                {% for control in conTrol %}
+                    <div class="col-md-3">
+                        <div class="company-service-sec text-center">
+                            <i class="{{control.icone}}"></i>
+                            <h2>{{control.title}}</h2>
+                            <p>{{control.details}}</p>
+                        </div>
+                    </div>
+                 {% endfor %}
+                    
+            </div>
+             
+        </div>
+    </section>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="sln-tt1">
+                        <h4>{{wifyBody.mid_title}}</h4>
+                        <p>{{wifyBody.mid_details}}
+                        <p>WiFi solution for a market or hospital or any other public places will depend on the specific needs and resources of the facility.</p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="sln-tt1-img">
+                        <img src="{{wifyBody.picture2.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row mt-4"> 
+                <div class="col-md-4">
+                    {% for BoTtom in BoTtom %}
+                    <div class="sln-text">
+                        <h4>{{BoTtom.title}}</h4>
+                        <p>{{BoTtom.details}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-4">
+                    <div class="sln-text">
+                        <h4>Cloud-based WiFi management</h4>
+                        <p>These platforms offer a range of features for managing WiFi users and billing, including user authentication, usage tracking, and payment processing. They are often used by businesses and organizations to manage public WiFi networks.</p>
+                    </div>
+                    <div class="sln-text mt-5">
+                        <h4>Customer loyalty bonus</h4>
+                        <p>Customer loyalty programs: Some hotspot management platforms allow users to create loyalty programs that reward customers for using the WiFi network. This can help to drive repeat business and customer loyalty.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <!-- <img class="w-100" src="img/002.png" alt=""> -->
+                </div>
+                <div class="col-md-12 py-5 mt-5">
+                    {% for conTent in conTent %}
+                    <div class="sln-text2 text-center">
+                        <h4>{{conTent.title}}</h4>
+                        <p>{{conTent.details}}</p>
+                        <a class="ask-demo" href="{% url 'contact' %}">{{conTent.demo}}</a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endfor %}
+{% endblock %}
+
+   

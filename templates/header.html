@@ -1,0 +1,84 @@
+{% load static %}
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+  
+     <!-- Topbar Start -->
+     {% for conntact in conntact %}
+    <section class="b-bac">
+            <section class="head-top-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="head-top-ll">
+                                <a href="#"><i class="fas fa-phone-alt"></i>{{conntact.header_ph_no}}</a>
+                                <a href="#"><i class="fas fa-envelope"></i>{{conntact.header_email}}</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="head-top-rr text-end">
+                                    <a href="#">Privacy Policy</a>
+                                    <a href="#">Tearms & Cndition</a>
+                                    <a href="{% url 'contact' %}">Contacts</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="top-bg">
+            <div class="container">
+                <div class="row gx-0">
+                    <div class="col-md-12 text-center">
+                        <div class="align-items-center">
+                            <img class="logo-img" src="{{conntact.logo.url}}" alt="">            
+                        </div>
+                    </div>
+                </div>
+            </div>    
+    </section>
+    {% endfor %}
+    <!-- Topbar End -->
+        
+        <!-- Navbar Start -->
+        <div class="container-fluid navbar navbar-expand-lg navbar-light py-lg-0 sticky">
+            <nav class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between text-white" id="navbarCollapse">
+                    <div class="navbar-nav m-auto py-0">
+                        <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'a2p' %}" class="nav-link dropdown-toggle">A2P</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'sms-switch' %}" class="nav-link dropdown-toggle">SMS Switch</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'voiceotp' %}" class="nav-link dropdown-toggle">Voice OTP</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'wifisolution' %}" class="nav-link dropdown-toggle">WiFi Solution</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'boardcast' %}" class="nav-link dropdown-toggle">Voice Boardcast</a>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="{% url 'contact' %}" class="nav-link dropdown-toggle">Contacts</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>

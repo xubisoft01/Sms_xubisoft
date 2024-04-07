@@ -1,0 +1,151 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+    {%for a2p in a2pobj %}
+    <section class="bg a2p">
+        <div class="container">
+            <div class="row mt-5">
+                <!-- <div class="col-md-4">
+                  <div class="hero-img">
+                      <img src="img/hero-img.png" alt="">
+                  </div>
+                </div> -->
+                <div class="col-md-12">
+                    <div class="hero-area text-center pb-5">
+                        <h1 class="about-hero-underline">{{a2p.title}}</h1>
+                        <p>{{a2p.details}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="slider-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="slider">
+                <div class="slide-track">
+                    {% for a2po in a2pslider %}
+                    <div class="slide">
+                    <a href="#"><img src="{{a2po.picture.url}}" alt=""></a>
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="design-full">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-pr">
+                        <p>{{a2p.contact}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="text-prbtn text-end">
+                     <a href="contact.html" class="btn design">Contact us</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="feature text-center mt-5">
+                    <h1>{{a2p.features}}</h1>
+                </div>
+                {% for a2pservice in a2pSms  %}
+                <div class="col-md-4 mt-5">
+                    <div class="service-icon">
+                        <i class="fas {{a2pservice.feature_icone}}"></i>
+                        <div class="service-sec text-center">
+                            <h4>{{a2pservice.feature_title}}</h4>
+                            <p>{{a2pservice.feature_details}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+           </div>
+        </div>
+    </section>
+
+    <section class="show-skill">
+        <div class="container">
+            <div class="row">
+                <div class="show-skil-tt text-center">
+                    <h1>{{a2p.vas_title}}</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="show-skill-head">
+                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed revolutionary ROI. Capitalise on low hanging fruit to identify a ballpark value.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                     <div class="show-skill-head">
+                    <p>Additional services such as opt-in and opt-out management, custom sender IDs, and API integration.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="row">
+                <div class="show-skil-tt text-center">
+                    <h1>{{a2p.work_title}}:</h1>
+                </div>  
+                <div class="row mt-5">
+                {% for a2pkal in a2pKloud %}
+                    <div class="col-md-6">
+                        <div class="company-industrial-sec">
+                           <p><strong>{{a2pkal.title}}:</strong> {{a2pkal.details}}</p>
+
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="design-full">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-pr">
+                        <p>{{a2p.contact}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                   <div class="text-prbtn text-end">
+                     <a href="#" class="btn design">Contact us</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="news-are"> 
+        <div class="container">
+            <div class="row">
+                    <div class="service-heading py-lg-5">
+                    <h1 class="news-underline">{{a2p.work_bottom}}</h1>
+                    <p>{{a2p.details2}}</p>
+                </div>
+                <div class="lets text-center">
+                    <a href="contact.html">GET IN TOUCH</a>
+                </div>
+            </div>
+    </section>
+    {% endfor %}
+ 
+
+{% endblock %}
+
+   

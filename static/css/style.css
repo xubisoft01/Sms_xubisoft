@@ -1,0 +1,1248 @@
+/********** Template CSS **********/
+:root {
+    --primary: #00529E;
+    --secondary: #206CFF;
+    --light: #FFFFFF;
+    --dark: #091E3E;
+}
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Roboto",sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6B6A75;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+h1,
+h2,
+.font-weight-bold {
+    font-weight: 700;
+}
+
+h3,
+h4,
+.font-weight-semi-bold {
+    font-weight: 600;
+}
+a{
+    color: var(--primary);
+}
+h5,
+h6,
+.font-weight-medium {
+    font-weight: 500;
+}
+sup {
+    top: 0;
+}
+.btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+}
+.btn-primary{
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 28px;
+    height: 28px;
+}
+
+.btn-lg-square {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.icon-design a{
+    color: #fff;
+    padding: 0 8px;
+}
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    outline: none;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+    padding: 20px 15px;
+}
+.sticky {
+    position: fixed;
+}
+.dropdown-toggle::after {
+    content: none;
+}
+.dropdown-toggle i{
+    margin-left: 5px;
+}
+
+@media (max-width: 991.98px) {
+
+    .navbar-light .navbar-nav .nav-link,
+    .sticky-top.navbar-light .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+}
+
+.heading-slider{
+    width: 130px;
+    height: 75px;
+    position: absolute;
+    background: #00529e;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 5px 10px 25px;
+    left: -10px;
+}
+.heading-slider::before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-color: #00529e transparent;
+    border-style: solid;
+    border-width: 0.51rem 0 0 0.51rem;
+    position: absolute;
+    bottom: -8px;
+    left: 1px;
+}
+.heading-slider span{
+    width: 0;
+    height: 0;
+    border-color: transparent #00529e;
+    border-style: solid;
+    border-width: 2.3rem 0 2.3rem 2rem;
+    top: 0px;
+    position: absolute;
+    right: -32px;
+}
+.slider-section{
+    margin-top: 30px;
+    margin-bottom: 0;
+    padding-right: 85px !important;
+    padding-left: 85px !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
+    color: #000;
+}
+
+.bg-gray{
+    background-color: #E8E8E8;
+    padding: 20px;
+    border-radius: 10px;
+    height: 215px;
+    margin-bottom: 10px;
+}
+.bg-gray p, .bg-gray ul{
+    margin-bottom: 0.5rem;
+}
+.bg-gray h2{
+    font-size: 28px;
+    color: #00529E;
+}
+.prod-content{
+    width: 60%;
+}
+.prod-image{
+    width: 40%;
+}
+
+/*------------- common css style-------------------  */
+/* section.b-bac {
+    background-image: url(../img/background-hero.jpg);
+} */
+
+/* -------------Head Top Nav Bar Strat ------------------ */
+section.head-top-bg {
+    background: #009ade;
+    padding: 10px;
+}
+.head-top-ll a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 0;
+    font-weight: 300;
+}
+.head-top-ll i {
+    padding-right: 10px;
+    font-size: 14px;
+}
+.head-top-rr.text-end a {
+    color: #fff;
+    padding: 12px;
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 0;
+}
+
+
+/* .logo-img{
+    width: 350px;
+} */
+/* -------------Head Top Nav Bar End -------------------- */
+
+section.top-bg {
+    padding: 22px;
+}
+.container{
+    max-width: 1200px;
+}
+
+div#navbarCollapse {
+    background: #009ade;
+    height: 60px;
+    border-radius: 2px;
+}
+
+.service-icon {
+    text-align: center;
+    border: 2px solid #fff;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 25px;
+}
+/* --------------slider-area started -------------*/
+.contact-head.pt-5 {
+    margin-top: 80px;
+}
+.slider-area {
+    text-align: center;
+    padding-top: 57px;
+    margin-top: 75px;
+}
+.slider-area h2 {
+    font-size: 42px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+.sl {
+    padding-top: 35px;
+    padding-bottom: 100px;
+}
+a.slider-bt {
+    /* border: 1px solid #fff; */
+    padding: 11px;
+    border-radius: 5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    background: #009ade;
+    color: #fff;
+}
+.sl i {
+    padding-left: 10px;
+}
+.bg{
+    /* background-image: url(../img/background-.jpg); */
+    background: #1e62ad;
+}
+section.bg.a2p {
+    margin-top: 130px;
+}
+h1.hero-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 66px;
+    background: #000;
+    height: 4px;
+    right: 55%;
+}
+.hero-img img {
+    max-width: 100%;
+    height: auto;
+}
+.hero-area {
+    padding-top: 80px;
+}
+.hero-area h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.hero-area h1 {
+    color: #fff;
+    padding-top: 12px;
+    font-size: 45px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.hero-area p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* --------------- Services area started ------------------- */
+section.service-section {
+    background: #c8dcf3;
+}
+
+h1.service-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 56px;
+    background: #000;
+    height: 4px;
+    right: 48%;
+}
+
+.service-icon i {
+    font-size: 36px;
+    padding: 20px;
+    color: rgb(0, 174, 239);
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+.service-heading h1 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-top: 40px;
+}
+.service-heading p {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    padding-top: 18px;
+}
+.service-sec h4 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+.service-sec p {
+    font-size: 15px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+
+.employment-history.text-center.mt-5 h1 {
+    font-size: 42px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+
+/*------------------ Voice otp area started------------------ */
+h1.news-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 56px;
+    background: #000;
+    height: 4px;
+    right: 48%;
+}
+section.news-are {
+    background: #f2f2f2;
+    padding-bottom: 90px;
+}
+.lets.text-center a {
+    background: #009ade;
+    color: #fff;
+    font-size: 15px;
+    padding: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+
+
+.lets.text-center a {
+    background: #009ade;
+    color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+/* ---------------Contact page area started---------------- */
+section.contact-sec {
+    margin-top: 130px;
+}
+.right_conatct_social_icon {
+    background: linear-gradient(to top right, #009ade -5%, #009ade 100%);
+}
+
+.contact_us {
+    background-color: #f1f1f1;
+    padding: 75px 0px;
+    margin-top: 128px;
+}
+
+.contact_inner {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 20px 22px 44px #cccc;
+    border-radius: 25px;
+}
+
+.contact_field {
+    padding: 60px 340px 90px 100px;
+}
+
+.right_conatct_social_icon {
+    height: 100%;
+}
+
+.contact_field h3 {
+    color: #000;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+
+.contact_field p {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
+.contact_field .form-control {
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.contact_field .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #009ade;
+}
+
+.contact_field .form-control::placeholder {
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.contact_info_sec {
+    position: absolute;
+    background-color: #2d2d2d;
+    right: 1px;
+    top: 18%;
+    height: 340px;
+    width: 340px;
+    padding: 40px;
+    border-radius: 25px 0 0 25px;
+}
+
+.contact_info_sec h4 {
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.info_single {
+    margin: 30px 0px;
+}
+
+.info_single i {
+    margin-right: 15px;
+}
+
+.info_single span {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+button.contact_form_submit {
+    background: linear-gradient(to top right, #009ade -5%, #009ade 100%);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.socil_item_inner li {
+    list-style: none;
+}
+
+.socil_item_inner li a {
+    color: #fff;
+    margin: 0px 15px;
+    font-size: 14px;
+}
+
+.socil_item_inner {
+    padding-bottom: 10px;
+}
+
+.map_sec {
+    padding: 50px 0px;
+}
+
+.map_inner h4,
+.map_inner p {
+    color: #000;
+    text-align: center
+}
+
+.map_inner p {
+    font-size: 13px;
+}
+
+.map_bind {
+    margin-top: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* -------------Footer Top area started----------------- */
+.top-f {
+    padding-bottom: 90px;
+    margin-top: 90px;
+}
+.top-f h4 {
+    margin-top: 90px;
+    color: #d2cfcf;
+    font-size: 13px;
+}
+.top-f h3 {
+    color: #fff;
+    font-size: 21px;
+    font-family: "Roboto", sans-serif;
+}
+.top-f p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+.top-f a {
+    color: #fff;
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.top-f a:hover {
+    color: rgb(0, 174, 239);
+}
+.top-f img {
+    width: 100%;
+    padding-top: 13px;
+}
+p.icon-design.ft a {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 9px;
+}
+.contact-image img {
+    height: 385px;
+    width: 950px;
+}
+label {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    padding-top: 4px;
+}
+input#name {
+    font-size: 14px;
+    box-shadow: none;
+    height: 50px;
+    font-weight: 300;
+}
+textarea#message {
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: none;
+}
+button#sub {
+    width: 430px;
+    height: 50px;
+    background: rgb(0, 174, 239);
+    border: none;
+    font-weight: 400;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+button#sub:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* ----------------A2P page area started-------------- */
+
+h1.about-hero-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 66px;
+    background: #000;
+    height: 4px;
+    right: 48%;
+}
+.show-skil-tt.text-center h1 {
+    font-size: 42px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+.complete.text-center h1 {
+    color: #3c3636;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+.complete.text-center p {
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.complete.text-center {
+    border-right: 1px solid #cdc7c7;
+    padding-bottom: 30px;
+}
+
+
+
+section.slider-bg {
+    background: #e2e2e2;
+}
+.slide img {
+    width: 120px;
+    height: 120px;
+    animation: scroll 60s linear infinite;
+}
+.slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+}
+.slider {
+    padding: 4em 5em;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-1000%)
+    }
+}
+
+
+section.design-full {
+    background: #232323;
+    padding: 15px;
+}
+.text-pr p {
+    color: #fff;
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    padding-top: 10px;
+}
+a.btn.design {
+    color: #fff;
+    margin-top: 6px;
+    border: 2px solid #fff;
+    /* background: #06A3DA; */
+    width: 150px;
+    height: 39px;
+}
+.feature.text-center.mt-5 h1 {
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+section.show-skill {
+    background-image: url(../img/background-hero.jpg);
+    margin-top: 60px;
+}
+.show-skill-head {
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+.show-skil-tt.text-center {
+    margin-top: 70px;
+}
+.show-skill-head p {
+    font-family: "Roboto", sans-serif;
+    padding-top: 20px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.6;
+}
+h2.about-pro-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 48px;
+    background: #000;
+    height: 4px;
+    right: 45%;
+}
+/* --------------SMS Switch page area started-------------- */
+.sms-img img {
+    width: 100%;
+    height: 393px;
+}
+section.sms-switch {
+    background: #009ade;
+    margin-top: 125px;
+    padding-top: 60px;
+    padding-bottom: 110px;
+}
+.contact-slider-area p {
+    padding-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+.contact-slider-area h2 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+.text-pr-service.text-center h1 {
+    color: #fff;
+    font-weight: 400;
+    padding-top: 30px;
+    font-family: "Roboto", sans-serif;
+}
+.text-pr-service.text-center p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    padding-bottom: 20px;
+}
+
+section.design-full-service {
+    background: #1d2b57;
+    padding: 20px;
+}
+.text-pr-service p {
+    color: #fff;
+    padding-top: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+.text-pr-service h3 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+}
+a.btn.design-service {
+    border: 2px solid #fff;
+    padding: 11px;
+    width: 150px;
+    color: #fff;
+}
+.text-prbtn.text-end.service {
+    padding-top: 25px;
+}
+section.bg-company-service {
+    /* background-image: url(../img/background-factory-verydark.jpg); */
+    padding-bottom: 90px;
+    margin-top: 80px;
+}
+.company-service-sec i {
+    font-size: 36px;
+    padding: 20px;
+    color: rgb(0, 174, 239);
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+.company-service-sec h2 {
+    font-size: 20px;
+    color: #000;
+    padding-top: 25px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+.company-service-sec p {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+h1.in-ser-page-underline:after {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 60px;
+    background: #000;
+    height: 4px;
+    right: 76%;
+}
+
+section.bg-company-industrial {
+    padding-bottom: 90px;
+}
+.company-industrial-sec img {
+    width: 100%;
+    height: 100%;
+}
+.company-industrial-sec h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+.company-industrial-sec p {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    padding-top: 17px;
+}
+
+/* ---------------Wifi Solution Page area started------------- */
+section.sln-bg {
+    background: #c8dcf3;
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 35px;
+}
+.solution-tt h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 42px;
+    font-family: "Roboto", sans-serif;
+}
+.company-service-sec.text-center {
+    border: 2px solid #fff;
+    width: 100%;
+    height: 370px;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+section.sln-hero {
+    margin-top: 130px;
+}
+.sln-img-area img {
+    width: 100%;
+}
+.sln-hero p {
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 2;
+    text-align: justify;
+}
+.sln-hero-pp p {
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    padding-top: 45px;
+}
+.sln-tt1-img img {
+    width: 100%;
+}
+.sln-tt1 h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.sln-tt1 p {
+    font-size: 17px;
+    text-align: justify;
+    padding-top: 13px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.sln-text h4 {
+    font-size: 23px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.8;
+}
+.sln-text p {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+    font-weight: 300;
+    text-align: justify;
+    padding-top: 10px;
+}
+.sln-text2 {
+    background: #232323;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+.sln-text2 h4 {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+}
+.sln-text2 p {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.7;
+    padding: 10px;
+}
+.sln-text2.text-center a {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-weight: 300;
+    padding: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background: #009ade;
+    font-size: 13px;
+}
+.faq-head h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 65px;
+    color: #009ade;
+    padding-top: 12px;
+    font-weight: 800;
+}
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 1.25rem;
+    font-size: 1rem;
+    color: #6B6A75;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+}
+
+button.accordion-button.collapsed {
+    font-size: 17px;
+    font-weight: 400;
+    padding: 25px;
+    font-family: "Roboto", sans-serif;
+}
+.faq-pp.mt-5 {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.faq-pp-right.p-4 h6 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+}
+.faq-pp-right.p-4 h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    padding-top: 12px;
+    font-weight: 500;
+}
+.faq-pp-right.p-4 p {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding-top: 30px;
+    line-height: 1.7;
+}
+.service-icon.d-flex.p {
+    padding: 10px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 0px;
+}
+h1.faq-needsupport:before {
+    position: absolute;
+    content: " ";
+    width: 4%;
+    margin-top: 60px;
+    background: #000;
+    height: 4px;
+    right: 33%;
+}
+.service-icon.d-flex.p i {
+    margin-top: 0;
+}
+
+
+/* ----------------Voice OTP page area started--------------- */
+.company-blog-pp h1 {
+    font-weight: 500;
+    padding-top: 7px;
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+}
+.company-blog-pp a h1:hover {
+    color: rgb(0, 174, 239);
+}
+.passwor-tt {
+    background: #232323;
+    padding: 120px;
+}
+.passwor-tt h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+.passwor-tt p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+    padding: 28px;
+}
+.passwor-tt-sm {
+    background: #232323;
+    padding: 15px;
+}
+.passwor-tt-sm p {
+    color: #fff;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+/* ----------------------boardcast age area started------------------ */
+.bordcast-tt h1 {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+.bordcast-tt p {
+    font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    padding-top: 30px;
+}
+.bordcast-tt a {
+    background: #009ade;
+    padding: 13px;
+    color: #fff;
+    border-radius: 23px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+}
+.bordcast-tt a:hover{
+    background: #000;
+}
+.boardcast-service-sec {
+    box-shadow: 0 1px 5.98px 3.02px rgba(0, 0, 0, 0.19);
+}
+.boardcast-service-sec i {
+    font-size: 36px;
+    padding: 15px;
+    color: rgb(0, 174, 239);
+    border: 2px solid rgba(0, 0, 0, .1);
+    margin: 23px 0px 0px 23px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+}
+.boardcast-service-sec h2 {
+    font-size: 20px;
+    padding: 0px 23px 1px 23px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+}
+.boardcast-service-sec p {
+    font-size: 15px;
+    padding: 0px 23px 23px 23px;
+    text-align: justify;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+section.boardcast-switch {
+    background: #009ade;
+    padding-top: 50px;
+    margin-bottom: 70px;
+}
+.boardcast-btc-area h2 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    padding-left: 20px;
+}
+.boardcast-btc-area p {
+    padding-top: 20px;
+    padding-left: 20px;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.card-body {
+    box-shadow: 0 1px 5.98px 3.02px rgba(0, 0, 0, 0.19);
+    background: #fff;
+    margin-bottom: 70px;
+    width: 100%;
+    height: 170px;
+}
+.card-body img {
+    width: 80px;
+    height: 80px;
+}
+.cad-txt h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #000;
+    padding-left: 15px;
+}
+.cad-txt p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    padding-left: 15px;
+}
+.boardcast-ft.text-center.pb-5 a {
+    background: #009ade;
+    padding: 14px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 26px;
+}
+.boardcast-ft.text-center.pb-5 a:hover{
+    background: #000;
+}
+/* --------------footer section style --------------*/
+.footer-section{
+    background-color: rgb(28, 28, 28);
+    padding: 70px 0 30px;
+    margin-top: 90px;
+}
+.footer-text{
+    margin-top: 20px;
+}
+.footer-title{
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.border-top{
+    border-top: 2px solid #636868;
+}
+.footer-section p{
+    color: #d9d6d6;
+}
+.about-sec2 {
+    padding-left: 60px;
+}
+.pro-sec1 .btn {
+    background: #000;
+    color: #d9d6d6;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+}
+.pro-sec2.pt-1 .btn {
+    background: #000;
+    color: #d9d6d6;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 13px;
+}
+.pro-sec3.pt-1 .btn {
+    background: #000;
+        color: #d9d6d6;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 13px;
+}
